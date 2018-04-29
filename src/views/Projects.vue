@@ -1,9 +1,8 @@
 <template>
-  <div class="home">
+  <div class="projects">
     <MainMenu/>
-
     <div class="px2">
-      <h1>Home page</h1>
+      <h1>Projects page</h1>
     </div>
   </div>
 </template>
@@ -12,9 +11,8 @@
 import MainMenu from "@/components/MainMenu.vue";
 
 export default {
-  name: "home",
   components: {
     MainMenu
   }
-};
+}
 </script>

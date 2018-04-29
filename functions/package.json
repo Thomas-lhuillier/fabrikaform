@@ -1,0 +1,30 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "fblogin": "firebase login",
+    "serve": "firebase serve --only functions",
+    "deploy": "firebase deploy --only functions",
+    "clean": "rimraf 'dist/functions'",
+    "build:funcs": "babel 'src/functions' --out-dir 'dist/functions' && cpx 'src/functions/{cors.json,keyfile.json}' 'dist/functions'",
+    "deps:copy": "cpx '*{package.json,package-lock.lock}' 'dist/functions'",
+    "deps:install": "cd 'dist/functions' && npm install"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^0.4.0",
+    "firebase-admin": "^4.1.2",
+    "firebase-functions": "^1.0.1",
+    "lodash": "^4.17.4",
+    "request-promise": "^2.0.0",
+    "sharp": "^0.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "cpx": "^1.5.0",
+    "firebase-tools": "^3.17.7",
+    "rimraf": "^2.6.2"
+  },
+  "private": true
+}

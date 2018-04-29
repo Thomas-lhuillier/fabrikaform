@@ -1,6 +1,8 @@
-.DS_Store
 node_modules
-/dist
+functions/dist
+functions/node_modules
+functions/src/functions/keyfile.json
+src/firebaseConfig.js
 
 # local env files
 .env.local
@@ -18,3 +20,5 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+.DS_Store
